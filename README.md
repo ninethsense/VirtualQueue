@@ -45,4 +45,4 @@ There was a mention in media about a *implementation document* and a *proposal d
   6. Server validates the authenticity of the eToken
   7. User buys the beverage of his choice
 
-  [Block Diagram](~/assets/req-highlevel.jpg)
+![Block Diagram](assets/req-highlevel.jpg)
