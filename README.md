@@ -62,8 +62,16 @@ Additional problems in Hand:
 5. Customer should be allotted a outlet within 10 kilometers range. So there needs a logic to measure the distance between customer and the outlet.
 6. Needs a database of Bars, Beer & Wine parlors, and any other outlets
 
-Note: *Detailed Requirement gathering and analysis is not much a scope of this paper. Only a basic requirements building activity is done here which is necessary for building the technical solution architecture.*
+Performance benchmarks for solution:
+7. It is expected to have max. 2,00,000 simultaneous customers on the first day, and 1,00,000 users after that. (Some sample assumptions)
+8. It is expected to have approx. 10,00,000 customers per day generating the app. 
 
+```diff
+- Note: Detailed Requirement gathering and analysis is not much a scope of this paper. Only a basic requirements building activity is done here which is necessary for building the technical solution architecture.
+```
 Thus the next level diagram will be like this:
 
 ![Block Diagram](assets/req-lowlevel.png)
+
+## Technical Analysis & Solutioning
+We have now in hand the functional requirements. Let us list down few unavoidable non-functional requirements.
