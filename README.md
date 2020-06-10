@@ -20,22 +20,10 @@ Finally, I am making this whitepaper public, under MIT License so the public can
 
 ## Requirements
 
-I have tried to find exact requirements for the application, but had to do some guesswork due to unavailability of formal information. I have to depend on:
-* KSBC Notice dt. 19.05.2020 [[Reference - UNDERTAKING.pdf](http://www.ksbc.kerala.gov.in/NOTICE/UNDERTAKING.pdf)]
-* KSBC Guidance dt. 23.05-2020 [[Reference - GUIDELINES.pdf](https://www.ksbc.kerala.gov.in/NOTICE/GUIDLINES.pdf)]
-* App functionalities mentioned in news by mainstream media, and common sense
+One liner -
+  >"A Virtual Queue Token generator application - which should support iPhone, Android and a responsive website."
 
-There was a mention in media about a *implementation document* and a *proposal document* but however I did not get those so, let me build my own simple requirement set.
-
-### Disclaimer
-> This Virtual Queue app has NO relation with KSBC's Bev Q App. Though the high level concept is same as any virtual queue app, the requirement discussed in this paper is a newly brainstormed one on a generic view point.
-
-
-### **Requirements Assumptions**
-
- A Virtual Queue Token generator application - which should support iPhone, Android and a responsive website.
-
-
+***More assumptions:***
 - SMS based Virtual Queue Token generator, which is primarily intended for classic mobile (non-smartphone) users, but smartphone users also can use this as an alternate method.
   - There is no mention anywhere in the reference documents that App need to be a website, iPhone, Android, or a tablet variant. 
 - A token validator application for the Bars & outlets
@@ -93,6 +81,8 @@ Thus the next level diagram will be like this:
 
 Here is a bird's eye view pseudo code for the application:
 ```java
+    // HelloToken.java
+
     public static void main(String[] args) {
 
         // New Customer wants to buy a bottle
@@ -194,14 +184,30 @@ Cloud hosting is considered in the solution because of load and cost constraints
 
 > Remember that there is always another better option for any better option. So whatever technical solution showcased here are just one way to do it. We can expand or cut short according to the real world scenarios.
 
-Technology Stack given is just for reference. This project can be done in any stack, such as .NET Core, Java or Python. So as the cloud services.
+Technology Stack given is just for reference. This project can be done in any stack, such as .NET Core, Java or Python, Azure, AWS, or Google Cloud etc. So as the cloud services.
+
+This is not about the technology, but approach.
 
 ![Generic Solution ](assets/tech-general.png)
-
-### **AWS / Amazon Web Services Solution:**
-![AWS Solution ](assets/tech-aws.png)
 
 ## Microsoft Azure Solution (Minimal):
 ![Azure Solution ](assets/tech-azure-min.png)
 
 Though, this is a minimal design, this is also highly scalable because Azure Functions auto scale. But SMS gateway is a place for concern, which we should make sure we choose the best provider, and best plan to accommodate the load.
+
+## Microsoft Azure Solution:
+![Azure Solution ](assets/tech-azure.png)
+
+## **AWS / Amazon Web Services Solution:**
+The Docker way.
+![AWS Solution ](assets/tech-aws.png)
+
+## Conclusion
+Designing an Enterprise Application is an Art. A simple logic like token generation can be done as a small 'HelloToken.java' program, as well as a highly scalable, but costly enterprise standard application. It is all about what you want, and there is always another best way to do the same thing.
+
+## References
+
+* [Amazon Web Services Documentation](https://docs.aws.amazon.com/)
+* [Microsoft Azure Documentation](https://docs.microsoft.com/en-us/azure/)
+* [KSBC Notice dt. 19.05.2020](http://www.ksbc.kerala.gov.in/NOTICE/UNDERTAKING.pdf)
+* [KSBC Guidance dt. 23.05-2020](https://www.ksbc.kerala.gov.in/NOTICE/GUIDLINES.pdf)
