@@ -70,12 +70,13 @@ Additional problems in Hand:
 6. Needs a database of Bars, Beer & Wine parlors, and any other outlets
 
 Performance benchmarks for solution:
+
 7. It is expected to have max. 2,00,000 simultaneous customers on the first day, and 1,00,000 users after that. (Some sample assumptions)
 8. It is expected to have approx. 10,00,000 customers per day generating the app. 
 
-```diff
-- Note: Detailed Requirement gathering and analysis is not much a scope of this paper. Only a basic requirements building activity is done here which is necessary for building the technical solution architecture.
-```
+
+> **Note**: Detailed Requirement gathering and analysis is not much a scope of this paper. Only a basic requirements building activity is done here which is necessary for building the technical solution architecture.
+
 Thus the next level diagram will be like this:
 
 ![Block Diagram](assets/req-lowlevel.png)
@@ -182,6 +183,8 @@ An enterprise grade solution is what is being showcased here.
 Cloud hosting is considered in the solution because of load and cost constraints inconsideration. Same solution can be workable in On-premise as well with minor technical decision changes if the expected load is less.
 
 > Remember that there is always another better option for any better option. So whatever technical solution showcased here are just one way to do it. We can expand or cut short according to the real world scenarios.
+
+Technology Stack given is just for reference. This project can be done in any stack, such as .NET Core, Java or Python. So as the cloud services.
 
 ![Generic Solution ](assets/tech-general.png)
 
