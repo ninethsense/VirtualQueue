@@ -26,9 +26,15 @@ I have tried to find exact requirements for the application, but had to do some 
 
 There was a mention in media about a *implementation document* and a *proposal document* but however I did not get those so, let me build my own simple requirement set.
 
+### Disclaimer
+> This Virtual Queue app has NO relation with KSBC's Bev Q App. Though the high level concept is same as any virtual queue app, the requirement discussed in this paper is a newly brainstormed one on a generic view point.
+
+
 ### **Requirements Assumptions**
 
-- A Virtual Queue Token generator application - which should support iPhone, Android and a responsive website.
+ A Virtual Queue Token generator application - which should support iPhone, Android and a responsive website.
+
+
 - SMS based Virtual Queue Token generator, which is primarily intended for classic mobile (non-smartphone) users, but smartphone users also can use this as an alternate method.
   - There is no mention anywhere in the reference documents that App need to be a website, iPhone, Android, or a tablet variant. 
 - A token validator application for the Bars & outlets
@@ -124,7 +130,7 @@ Here is a bird's eye view pseudo code for the application:
 
         }
         public String requestNewTokenByCustomer(String pinCode) {
-            // Logic for - Token generation logic
+            // Logic for - Token generation 
             // Logic for - Find nearest outlet using pinCode
 
             // Send token by SMS if PhoneType is SMS
@@ -157,4 +163,29 @@ Here is a bird's eye view pseudo code for the application:
 ```
 
 ## Technical Analysis & Solutioning
-We have now in hand the functional requirements. Let us list down few unavoidable non-functional requirements.
+We have now in hand the functional requirements. Let us list down few major non-functional requirements.
+
+1. Scalability - Number of hits matters
+2. Availability - Should work all time
+3. Security - People should not cheat
+4. User friendly - There is no discrimination between Drunkards
+5. Auditability - Any transaction should be transparent
+6. Extensibility - Requirements are Agile today
+7. Fault Tolerance - failures are not acceptable
+8. Performance - Most drunkards are impatient
+9. Quality - No compromise
+
+An enterprise grade solution is what is being showcased here.
+
+### High Level generic deployment diagram
+Cloud hosting is considered in the solution because of load and cost constraints inconsideration. Same solution can be workable in On-premise as well with minor technical decision changes if the expected load is less.
+
+> Remember that there is always another better option for any better option. So whatever technical solution showcased here are just one way to do it. We can expand or cut short according to the real world scenarios.
+
+![Generic Solution ](assets/tech-general.png)
+
+#### AWS / Amazon Web Services Solution:
+![AWS Solution ](assets/tech-aws.png)
+
+#### Microsoft Azure Solution:
+![Azure Solution ](assets/tech-general.png)
