@@ -58,6 +58,15 @@ For a layman, a drunkard will request for a token in the mobile phone and he vis
 
 ![Block Diagram](assets/req-highlevel.jpg)
 
+## Number of Applications
+Based on the initial requirements, we will require:
+1. App for Smart Phones - for Customers
+2. App for Smart Phones - for Outlets
+3. A Website as an alternate way to get token, and also for admin to generate reports. Admin module can be avoided if we use tools like Power BI or Tableau by connecting directly to database, or by creating an API
+4. A server side application/or some code to handle SMS based registration & token requests
+
+For Smartphone apps, we can go with cross-platform tools such as Xamarin, Flutter, React Native, or NativeScript. But for scalable applications it is recommended to have them developed as native applications.
+
 ## Requirements Analysis
 Let us think from a Business Analysis/Business Architecture point of view.
 
@@ -76,6 +85,7 @@ Performance benchmarks for solution:
 
 
 > **Note**: Detailed Requirement gathering and analysis is not much a scope of this paper. Only a basic requirements building activity is done here which is necessary for building the technical solution architecture.
+
 
 Thus the next level diagram will be like this:
 
@@ -179,7 +189,7 @@ We have now in hand the functional requirements. Let us list down few major non-
 
 An enterprise grade solution is what is being showcased here.
 
-### High Level generic deployment diagram
+### **High Level generic deployment diagram**
 Cloud hosting is considered in the solution because of load and cost constraints inconsideration. Same solution can be workable in On-premise as well with minor technical decision changes if the expected load is less.
 
 > Remember that there is always another better option for any better option. So whatever technical solution showcased here are just one way to do it. We can expand or cut short according to the real world scenarios.
@@ -188,8 +198,10 @@ Technology Stack given is just for reference. This project can be done in any st
 
 ![Generic Solution ](assets/tech-general.png)
 
-#### AWS / Amazon Web Services Solution:
+### **AWS / Amazon Web Services Solution:**
 ![AWS Solution ](assets/tech-aws.png)
 
-#### Microsoft Azure Solution (pending):
-![Azure Solution ](assets/tech-general.png)
+## Microsoft Azure Solution (Minimal):
+![Azure Solution ](assets/tech-azure-min.png)
+
+Though, this is a minimal design, this is also highly scalable because Azure Functions auto scale. But SMS gateway is a place for concern, which we should make sure we choose the best provider, and best plan to accommodate the load.
