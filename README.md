@@ -17,7 +17,6 @@ Finally, I am making this whitepaper public, under MIT License so the public can
 1. Requirements Gathering & Analysis
 2. High Level Solution Design
 3. Deployment Architecture
-4. Cost & Efforts Estimation5. 
 
 ## Requirements
 
