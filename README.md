@@ -4,14 +4,14 @@
 This *technical whitepaper* is an attempt to design an architecturally near perfect virtual queue application.
 
 ## Background
-During the [Corona virus pandemic](https://en.wikipedia.org/wiki/COVID-19_pandemic) lockdown in 2020, [Kerala State Beverages Corporation Limited](https://www.ksbc.kerala.gov.in/), aka KSBC decided to introduce a virtual queue system, a mobile app to resume the sale of Liquor, Beer and Wine but also same time making sure the state wide lockdown protocol is followed, especially the social distancing part. But due to various reasons the said mobile app became a [fiasco](https://english.manoramaonline.com/news/kerala/2020/05/28/faircode-bevq-kerala-state-beverages-corp-glitches.html) (as on 30 May 2020).
+During the [Corona virus pandemic](https://en.wikipedia.org/wiki/COVID-19_pandemic) lockdown in 2020, [Kerala State Beverages Corporation Limited](https://www.ksbc.kerala.gov.in/), aka KSBC decided to introduce a virtual queue system, a mobile app to resume the sale of Liquor, Beer and Wine but also same time making sure the state wide lockdown protocol is followed, especially social distancing. But due to various reasons the said mobile app became a [fiasco](https://english.manoramaonline.com/news/kerala/2020/05/28/faircode-bevq-kerala-state-beverages-corp-glitches.html) (as on 30 May 2020).
 
 As a citizen & netizen, and more over a technology enthusiast, I was following all the news coming out and was closely monitoring the technology aspects or views shared by mainstream and social media, and also the comments posted by the readers. There were logical as well as illogical comments from both the app developers as well as readers. This triggered me to think *why an app, which sounds simple, but became a mess* for the entire State of Kerala.
 
 ## Context & Intention
-Definitely, political side of the problem is not my problem. Intention of this paper is to design a simple, but scalable Virtual Queue system.
+Definitely, political side of the App is not my problem. Intention of this paper is to design a simple, but scalable Virtual Queue system.
 
-Finally, I am making this whitepaper public, under MIT License so the public can refer the design to develop their own applications. And also, contribute suggestions & corrections so we can improve this paper.
+Finally, I am making this whitepaper public, under MIT License so the community can refer the design to develop their own applications. And also, contribute suggestions & corrections so we can improve this paper.
 
 ## Table of Contents
 1. Requirements Gathering & Analysis
@@ -21,18 +21,17 @@ Finally, I am making this whitepaper public, under MIT License so the public can
 ## Requirements
 
 One liner -
-  >"A Virtual Queue Token generator application - which should support iPhone, Android and a responsive website."
+  >"A Virtual Queue Token generator application - which should support Smart Phone and a responsive website."
 
 ***More assumptions:***
-- SMS based Virtual Queue Token generator, which is primarily intended for classic mobile (non-smartphone) users, but smartphone users also can use this as an alternate method.
-  - There is no mention anywhere in the reference documents that App need to be a website, iPhone, Android, or a tablet variant. 
+- SMS based Virtual Queue Token generator, which is primarily intended for classic mobile (non-smartphone) users, but smartphone users also can use this as an alternate method.  
 - A token validator application for the Bars & outlets
 - An admin management console, which can:
   - Take Reports
   - Change token generator Schedule 
   - CRUD for Bars and outlets
 - High Level Use Case
-  1. User visits the App*
+  1. User visits the App
   2. User enters the postal [pin code](https://en.wikipedia.org/wiki/Postal_Index_Number)
   3. User gets a eToken with a schedule. The venue is expected to be within 10 KM range
   4. User, as per the timeslot given, goes to the allotted venue - Bar or outlet
@@ -50,7 +49,7 @@ For a layman, a drunkard will request for a token in the mobile phone and he vis
 Based on the initial requirements, we will require:
 1. App for Smart Phones - for Customers
 2. App for Smart Phones - for Outlets
-3. A Website as an alternate way to get token, and also for admin to generate reports. Admin module can be avoided if we use tools like Power BI or Tableau by connecting directly to database, or by creating an API
+3. A Website as an alternate way to get token, and also for admin to manage list of outlets & generate reports. Admin module can be avoided if we use tools like Power BI or Tableau by connecting directly to database, or by creating an API
 4. A server side application/or some code to handle SMS based registration & token requests
 
 For Smartphone apps, we can go with cross-platform tools such as Xamarin, Flutter, React Native, or NativeScript. But for scalable applications it is recommended to have them developed as native applications.
@@ -182,11 +181,10 @@ An enterprise grade solution is what is being showcased here.
 ### **High Level generic deployment diagram**
 Cloud hosting is considered in the solution because of load and cost constraints inconsideration. Same solution can be workable in On-premise as well with minor technical decision changes if the expected load is less.
 
-> Remember that there is always another better option for any better option. So whatever technical solution showcased here are just one way to do it. We can expand or cut short according to the real world scenarios.
+> Remember that there is always another better option for any better option. So whatever technical solution showcased here are just one way to do it. We can customize the design according to the real world scenarios.
 
-Technology Stack given is just for reference. This project can be done in any stack, such as .NET Core, Java or Python, Azure, AWS, or Google Cloud etc. So as the cloud services.
-
-This is not about the technology, but approach.
+#### Technology Stack
+Technology Stack given is just for reference. This project can be done in any stack, such as .NET Core, Java or Python, Azure, AWS, or Google Cloud etc. 
 
 ![Generic Solution ](assets/tech-general.png)
 
@@ -201,9 +199,6 @@ Though, this is a minimal design, this is also highly scalable because Azure Fun
 ## **AWS / Amazon Web Services Solution:**
 The Docker way.
 ![AWS Solution ](assets/tech-aws.png)
-
-## Conclusion
-Designing an Enterprise Application is an Art. A simple logic like token generation can be done as a small 'HelloToken.java' program, as well as a highly scalable, but costly enterprise standard application. It is all about what you want, and there is always another best way to do the same thing.
 
 ## References
 
