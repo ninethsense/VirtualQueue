@@ -1,3 +1,5 @@
+![VQMS](assets/vqms.jpg)
+
 # Virtual Queue Management System
 This *technical whitepaper* is an attempt to design an architecturally near perfect virtual queue application.
 
@@ -187,5 +189,5 @@ Cloud hosting is considered in the solution because of load and cost constraints
 #### AWS / Amazon Web Services Solution:
 ![AWS Solution ](assets/tech-aws.png)
 
-#### Microsoft Azure Solution:
+#### Microsoft Azure Solution (pending):
 ![Azure Solution ](assets/tech-general.png)
