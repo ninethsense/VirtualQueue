@@ -4,7 +4,7 @@
 This *technical whitepaper* is an attempt to design an architecturally near perfect virtual queue application.
 
 ## Background
-During the [Corona virus pandemic](https://en.wikipedia.org/wiki/COVID-19_pandemic) lockdown in 2020, [Kerala State Beverages Corporation Limited](https://www.ksbc.kerala.gov.in/), aka KSBC decided to introduce a virtual queue system, a mobile app to resume the sale of Liquor, Beer and Wine but also same time making sure the state wide lockdown protocol is followed, especially social distancing. But due to various reasons the said mobile app became a [fiasco](https://english.manoramaonline.com/news/kerala/2020/05/28/faircode-bevq-kerala-state-beverages-corp-glitches.html) (as on 30 May 2020).
+During the [Corona virus pandemic](https://en.wikipedia.org/wiki/COVID-19_pandemic) lock down in 2020, [Kerala State Beverages Corporation Limited](https://www.ksbc.kerala.gov.in/), aka KSBC decided to introduce a virtual queue system, a mobile app to resume the sale of Liquor, Beer and Wine but also same time making sure the state wide lock down protocol is followed, especially social distancing. But due to various reasons the said mobile app became a [fiasco](https://english.manoramaonline.com/news/kerala/2020/05/28/faircode-bevq-kerala-state-beverages-corp-glitches.html) (as on 30 May 2020).
 
 As a citizen & netizen, and more over a technology enthusiast, I was following all the news coming out and was closely monitoring the technology aspects or views shared by mainstream and social media, and also the comments posted by the readers. There were logical as well as illogical comments from both the app developers as well as readers. This triggered me to think *why an app, which sounds simple, but became a mess* for the entire State of Kerala.
 
@@ -34,7 +34,7 @@ One liner -
   1. User visits the App
   2. User enters the postal [pin code](https://en.wikipedia.org/wiki/Postal_Index_Number)
   3. User gets a eToken with a schedule. The venue is expected to be within 10 KM range
-  4. User, as per the timeslot given, goes to the allotted venue - Bar or outlet
+  4. User, as per the time slot given, goes to the allotted venue - Bar or outlet
   5. Bartender, using his mobile app scans the user's eToken, or enters the eToken received as SMS 
   6. Server validates the authenticity of the eToken
   7. User buys the beverage of his choice
@@ -163,7 +163,7 @@ Here is a bird's eye view pseudo code for the application:
     }
 ```
 
-## Technical Analysis & Solutioning
+## Technical Analysis & Solution
 We have now in hand the functional requirements. Let us list down few major non-functional requirements.
 
 1. Scalability - Number of hits matters
